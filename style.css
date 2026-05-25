@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background-color: #1C1D21;
+    color: white;
+}
+
+.header {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    width: min(600px, calc(100% - 32px));
+    height: 50px;
+    padding: 0 24px 0 10px;
+    border-radius: 30px;
+    background-color: rgba(217, 217, 217, 0.75);
+    filter: blur(0.1px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+.logo {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.nav-link {
+    color: #111111;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    opacity: 0.6;
+}
+
+.hero {
+    padding: 64px 16px 80px;
+}
+
+.hero-wrapper {
+    width: min(890px, 100%);
+    margin: 0 auto;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.hero-card {
+    width: min(840px, calc(100% - 80px));
+    min-height: 370px;
+    padding: 32px 48px;
+    margin: 36px auto 0;
+    background: linear-gradient(90deg, rgba(1, 11, 160, 0.6) 34%, rgba(0, 4, 58, 0.6) 97%);
+    border-radius: 20px;
+}
+
+.hero-text {
+    max-width: 760px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.15;
+    font-weight: 600;
+    white-space: pre-line;
+}
+
+.booking-btn {
+    margin-top: 1em;
+    transition: 0.2s;
+    background-color: #4682B4;
+    border-radius: 15px;
+    padding: 0.5em;
+    color: white;
+    font-weight: 600;
+    border: 2px solid white;
+}
+
+.booking-btn:hover {
+    cursor: pointer;
+    scale: 1.3;
+    box-shadow: 3px 3px 5px 0 #00BFFF;
+}
+
+.tariffs {
+    padding: 160px 20px 180px 20px;
+}
+
+.tariffs__container {
+    max-width: 1320px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 120px;
+    align-items: start;
+}
+
+.tariff-card {
+    background-color: #E6E6E6;
+    color: #111111;
+    border-radius: 15px;
+    min-height: 490px;
+    padding: 18px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tariff-card--purple {
+    box-shadow: 0 4px 4px rgba(115, 0, 255, 0.25),
+                0 4px 16px rgba(115, 0, 255, 0.25),
+                0 4px 32px rgba(115, 0, 255, 0.25),
+                0 4px 64px rgba(115, 0, 255, 0.25);
+}
+
+.tariff-card--red {
+    box-shadow: 0 4px 4px rgba(175, 32, 32, 0.25),
+                0 4px 16px rgba(175, 32, 32, 0.25),
+                0 4px 32px rgba(175, 32, 32, 0.25),
+                0 4px 64px rgba(175, 32, 32, 0.25),
+                0 4px 128px rgba(175, 32, 32, 0.25),
+                0 4px 256px rgba(175, 32, 32, 0.25);
+}
+
+.tariff-card__title {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.tariff-card__img {
+    width: 270px;
+    height: 210px;
+    object-fit: contain;
+}
+
+.tariff-card__text {
+    font-weight: 700;
+    max-width: 90%;
+    line-height: 1.15;
+    font-size: 18px;
+    white-space: pre-line;
+}
+
+.tariffs-head {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.contacts-text {
+    text-align: left;
+    white-space: pre-line;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.contacts {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts-container {
+    margin-top: 30px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5em;
+    background-color: #2d303a;
+    box-shadow: 3px 3px 15px #111111;
+}
+
+.contacts-head {
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.contacts-img {
+    height: 350px;
+}
+
+.contacts-adress {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding-top: 25px;
+    }
+
+    .nav {
+        padding: 12px 8px;
+    }
+
+    .nav-list {
+        gap: 21px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero-img {
+        height: 320px;
+        object-fit: contain;
+    }
+
+    .hero-card {
+        width: 100%;
+        height: auto;
+        padding: 28px 24px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .tariffs__container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        display: none;
+    }
+
+    .nav {
+        justify-content: space-around;
+    }
+
+    .hero-img {
+        height: 240px;
+    }
+
+    .hero-card {
+        padding: 22px 20px;
+        margin-top: 24px;
+        border-radius: 16px;
+    }
+}
